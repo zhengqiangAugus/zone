@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+	<diskStore path="C:\Users\y\Desktop\a" />
+	<!-- 缓存记录总数限制 是否永远不销毁 当缓存闲置时间超过该值，则自动销毁 当缓存生成时间超过该值，则自动销毁 当缓存记录数超过时，是否写入磁盘 
+		淘汰方式：淘汰使用较少的对象 -->
+	<defaultCache maxElementsInMemory="10000" eternal="false"
+		timeToIdleSeconds="1200" timeToLiveSeconds="1200" overflowToDisk="true"
+		clearOnFlush="true" memoryStoreEvictionPolicy="LFU">
+	</defaultCache>
+	<cache name="testCache"  
+		maxElementsInMemory="1000"  
+		eternal="false"  
+		timeToIdleSeconds="150"  
+		timeToLiveSeconds="150"  
+		overflowToDisk="false"  
+		memoryStoreEvictionPolicy="LFU"  
+		/> 
+	<cache name="SimplePageCachingFilter" maxElementsInMemory="100"
+		maxElementsOnDisk="1000" eternal="false" overflowToDisk="true"
+		diskSpoolBufferSizeMB="20" timeToIdleSeconds="120" timeToLiveSeconds="120"
+		memoryStoreEvictionPolicy="LFU" /> 
+</ehcache>

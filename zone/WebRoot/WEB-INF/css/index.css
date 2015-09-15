@@ -1,0 +1,86 @@
+body{-moz-user-select: none; /*火狐*/-webkit-user-select: none; /*webkit浏览器*/-ms-user-select: none; /*IE10*/-khtml-user-select: none; /*早期浏览器*/user-select: none;cursor: default;margin: 0px;overflow:hidden;background: url('../images/bg.jpg') repeat-x scroll 0% 0% #C8E4FA;position:relative;}
+.bg_0 {display:block;width: 100%;height:100%;position:absolute;top: 0px;left: 0px;z-index: -1;border:none;background:url("../images/login_bg_middle.jpg");background-size:110% auto;}
+.login_title {display: block;font-size: 31px;font-weight: bolder;padding-top: 15px;padding-bottom: 8px;}
+.login_content {position: relative;}
+.login_content,.login_main {width: 400px;height: 250px;text-align: center;}
+.login_main:after {content: "";width: 100%;height: 100%;position: absolute;top: 0px;left: 0px;background-color: white;filter: alpha(opacity = 60);opacity:0.6;z-index: -1;}
+.login_main .lefthand {width: 30px;height: 20px;display: block;position: absolute;top: -10px;left: 100px;background: url("../images/hand.png");z-index: 1;}
+.login_main .righthand {width: 30px;height: 20px;display: block;position: absolute;top: -10px;left: 270px;background: url("../images/hand.png");z-index: 1;}
+.login_main .thehead {width: 97px;height: 92px;display: block;position: absolute;top: -85px;left: 150px;background: url("../images/tou.png");}
+.login_main .fieldspan {display: inline-block;width: 230px;height: 40px;margin-top: 13px;position: relative;}
+.login_main .fieldspan .input {width: 200px;height: 30px;font-size: 18px;border: none;float: right;background-color:rgba(255,255,255,0.6)}
+.login_main .fieldspan .user_field {}
+.login_main .fieldspan .user_field:before {content: "";display: block;position: absolute;width: 30px;height: 30px;background: url("../images/user_logo.jpg");background-size: 30px 30px;}
+.login_main .fieldspan .pwd_field {}
+.login_main .fieldspan .pwd_field:before {content: "";display: block;position: absolute;width: 30px;height: 30px;background: url("../images/password_logo.jpg");background-size: 30px 30px;}
+.blue_bt {width: 100px;height: 30px;background-color: #41D0F4;border: none;height: 30px;background-color: #41D0F4;border: none;cursor: pointer;}
+.login_table{width:100%;height:100%;background-color:transparent;}
+@media screen and (max-width:1000px){
+	body{overflow:auto;}
+	.bg_0 {background:url("../images/login.jpg");background-size:100% 100%;background-attachment:fixed;background-repeat:no-repeat;}
+	.login_content,.login_main {width:300px;height: 250px;text-align: center;}
+}
+
+.login_main .lefthandon{width: 32px;height: 37px;display: block;position: absolute;z-index: 1;;background: url("../images/lefthand.png");animation:lefthandmove 0.8s;-moz-animation:lefthandmove 0.8s;-webkit-animation:lefthandmove 0.8s;-o-animation:lefthandmove 0.8s;left:160px;top:-37px;background-repeat: no-repeat}
+.login_main .righthandon {width: 32px;height: 37px;display: block;position: absolute;background: url("../images/righthand.png");z-index: 1;left:206px;top:-37px;animation:righthandmove 0.8s;-moz-animation:righthandmove 0.8s;-webkit-animation:righthandmove 0.8s;-o-animation:righthandmove 0.8s;background-repeat: no-repeat;}
+@keyframes lefthandmove{
+	0% {top: -10px;left: 100px;background-position: 0px -37px;}
+	30% {background-position: 0px -37px;}
+	31% {background-position: 0px 0px;}
+	100% {left:160px;top:-37px;background-position: 0px 0px;}
+}
+@-moz-keyframes lefthandmove /* Firefox */  {
+	0% {top: -10px;left: 100px;background-position: 0px -37px;}
+	30% {background-position: 0px -37px;}
+	31% {background-position: 0px 0px;}
+	100% {left:160px;top:-37px;background-position: 0px 0px;}
+}
+@-webkit-keyframes lefthandmove /* Safari 和 Chrome */  {
+	0% {top: -10px;left: 100px;background-position: 0px -37px;}
+	30% {background-position: 0px -37px;}
+	31% {background-position: 0px 0px;}
+	100% {left:160px;top:-37px;background-position: 0px 0px;}
+}
+@-o-keyframes lefthandmove /* Opera */  {
+	0% {top: -10px;left: 100px;background-position: 0px -37px;}
+	30% {background-position: 0px -37px;}
+	31% {background-position: 0px 0px;}
+	100% {left:160px;top:-37px;background-position: 0px 0px;}
+}
+
+@keyframes righthandmove{
+	0% {top: -10px;left: 270px;background-position: 0px -37px;}
+	30% {background-position: 0px -37px;}
+	31% {background-position: 0px 0px;}
+	100% {left:206px;top:-37px;background-position: 0px 0px;}
+}
+@-moz-keyframes righthandmove /* Firefox */  {
+	0% {top: -10px;left: 270px;background-position: 0px -37px;}
+	30% {background-position: 0px -37px;}
+	31% {background-position: 0px 0px;}
+	100% {left:206px;top:-37px;background-position: 0px 0px;}
+}
+@-webkit-keyframes righthandmove /* Safari 和 Chrome */  {
+	0% {top: -10px;left: 270px;background-position: 0px -37px;}
+	30% {background-position: 0px -37px;}
+	31% {background-position: 0px 0px;}
+	100% {left:206px;top:-37px;background-position: 0px 0px;}
+}
+@-o-keyframes righthandmove /* Opera */  {
+	0% {top: -10px;left: 270px;background-position: 0px -37px;}
+	30% {background-position: 0px -37px;}
+	31% {background-position: 0px 0px;}
+	100% {left:206px;top:-37px;background-position: 0px 0px;}
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+	cursor:pointer;
+}
+
+
+
+
+

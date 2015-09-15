@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 3.0//EN" "http://getahead.org/dwr//dwr30.dtd">
+<!-- 通用dwr配置 -->
+<dwr>
+    <allow>
+        <!-- 建立JS对象，将目标对象的方法转换成JS对象的方法 -->
+        <!-- 从Spring中获取Java对象 -->
+        <create javascript="messageService" creator="spring">
+            <param name="beanName" value="messageService"></param>
+        </create>
+        <convert match="com.zq.bean.*" converter="bean"></convert>
+        <convert match="org.springframework.data.domain.PageImpl" converter="bean"></convert>
+    </allow>
+</dwr>
