@@ -62,5 +62,7 @@
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dwr/bsf.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dwr/dwr3.0.jar"/>
 	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/spring/spring-orm-3.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mail/activation.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mail/mail.jar"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

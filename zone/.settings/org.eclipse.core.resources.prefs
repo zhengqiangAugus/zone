@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//WebRoot/WEB-INF/css/index.css=UTF-8
-encoding//WebRoot/WEB-INF/page/login.html=UTF-8
+encoding//WebRoot/WEB-INF/page/login.htm=UTF-8
 encoding//src/com/zq/filter/PageCachingFilter.java=GBK
 encoding//src/com/zq/util/ImageUtil.java=UTF-8
+encoding//src/config.properties=UTF-8
 encoding/<project>=UTF-8

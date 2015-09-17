@@ -30,6 +30,7 @@ public class User extends IDBean{
 	/**
 	 * 邮箱
 	 */
+	@Column(nullable=false)
 	private String email;
 	/**
 	 * 密码

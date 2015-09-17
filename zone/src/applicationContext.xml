@@ -29,6 +29,8 @@
           http://www.springframework.org/schema/mvc 
 			http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd"
           >
+    <context:property-placeholder ignore-resource-not-found="true" location="classpath*:config.properties"/> 
+    
     <bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<!-- 要与persistence.xml 的name相同 -->

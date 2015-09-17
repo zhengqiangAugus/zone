@@ -10,15 +10,21 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 
 public class SecurityInterceptor extends HandlerInterceptorAdapter {
+	private String[] ignorePath = {"/","/login","/register"};
 	@Override  
     public boolean preHandle(HttpServletRequest request,HttpServletResponse response, Object handler) throws Exception{  
 		if(handler instanceof HandlerMethod){
 			String servlet = request.getServletPath();
-			if(!"/".equals(servlet)&&!"/login".equals(servlet)){
-				if(request.getSession().getAttribute("user")==null){
-					response.sendRedirect("/");
-					return false;
+			boolean boo = true;
+			for (String path : ignorePath) {
+				if(servlet.equals(path)){
+					boo = false;
+					break;
 				}
+			}
+			if(boo&&request.getSession().getAttribute("user")==null){
+				response.sendRedirect("/");
+				return false;
 			}
 		}
 		return true;

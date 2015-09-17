@@ -8,6 +8,9 @@
         <create javascript="messageService" creator="spring">
             <param name="beanName" value="messageService"></param>
         </create>
+        <create javascript="userService" creator="spring">
+            <param name="beanName" value="userService"></param>
+        </create>
         <convert match="com.zq.bean.*" converter="bean"></convert>
         <convert match="org.springframework.data.domain.PageImpl" converter="bean"></convert>
     </allow>

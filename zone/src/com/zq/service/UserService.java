@@ -30,4 +30,12 @@ public class UserService {
 		return userDao.login(nem, password);
 	}
 	
+	public boolean hasUser(String username){
+		Long count = userDao.checkUnique(username);
+		if(count>0){
+			return true;
+		}
+		return false;
+	}
+	
 }

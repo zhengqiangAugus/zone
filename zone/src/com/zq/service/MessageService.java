@@ -16,5 +16,4 @@ public class MessageService {
 	public List<Message> findAll(){
 		return messageDao.findAll();
 	}
-	
 }
