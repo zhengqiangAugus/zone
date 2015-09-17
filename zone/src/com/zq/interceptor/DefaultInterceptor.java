@@ -11,7 +11,7 @@ import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.zq.action.BaseAction;
+import com.zq.base.BaseAction;
 
 public class DefaultInterceptor extends HandlerInterceptorAdapter{
 	@Override  

@@ -58,4 +58,13 @@
     		<bean class="com.zq.interceptor.SecurityInterceptor"></bean>
     	</mvc:interceptor>
     </mvc:interceptors>
+    
+    <bean id="controllerAdvice" class="com.zq.aop.ControllerAdvice"></bean>
+    <aop:config>
+        <aop:pointcut expression="execution(* com.zq.action.*.*(..))" id="cpc" />
+		<aop:aspect id="controllerAsect" ref="controllerAdvice">
+			<aop:around method="proxy" pointcut-ref="cpc"/>
+		</aop:aspect>
+    </aop:config>
+    
 </beans>

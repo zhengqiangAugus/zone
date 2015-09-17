@@ -22,9 +22,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class EmailService {
-	@Value("EMAIL.ADDRESS")
+	@Value("${EMAIL.ADDRESS}")
 	private String from;
-	@Value("EMAIL.PASSWORD")
+	@Value("${EMAIL.PASSWORD}")
 	private String password;
 	
 	private static final String[] arr = "AB0CDE1FG2HIJ3KL7MN4OPQ5RS6TU7VW8XY9Z".split("");

@@ -1,4 +1,4 @@
-package com.zq.action;
+package com.zq.base;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

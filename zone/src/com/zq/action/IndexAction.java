@@ -6,10 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.zq.base.Ajax;
+import com.zq.base.BaseAction;
 import com.zq.bean.User;
 import com.zq.service.EmailService;
 import com.zq.service.UserService;
-import com.zq.util.CommUtil;
 
 
 
@@ -45,12 +46,10 @@ public class IndexAction extends BaseAction{
 	
 	@RequestMapping("/register")
 	public String register(){
-		if(CommUtil.JudgeIsMoblie(request)){
-			return "mobile/register";
-		}
 		return "register";
 	}
 	
+	@Ajax
 	@RequestMapping("/sendEmail")
 	public @ResponseBody String sendEmail(String email){
 		String code = emailService.sendCheckCode(email);

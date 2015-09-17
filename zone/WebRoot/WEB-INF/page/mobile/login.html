@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<base href="$!path">
+		<title>登录</title>
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<script type="text/javascript" src="$!path/js/default/default.js"></script>
+		<link rel="stylesheet" type="text/css" href="$!path/css/index.css"/>
+		<script type="text/javascript" src="$!path/js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="$!path/js/dwr.js"></script>
+		<script type="text/javascript" src="$!path/js/login.js"></script>
+		<script type="text/javascript" src="$!path/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="$!path/js/jquery-form.js"></script>
+	</head>
+	<body onSelect="document.selection.empty();" onDragStart="return false;" onSelectStart="return false;" onContextMenu="return false;">
+		<span class="bg_0"></span>
+		<table border="0px" cellpadding="0" cellspacing="0" class="login_table">
+			<tr>
+				<td align="center" valign="middle">
+					<div class="login_content">
+						<form action="login" method="post">
+						<div class="login_main">
+							<span class="lefthand"></span>
+							<span class="righthand"></span>
+							<span class="thehead"></span>
+							<span class="login_title">登录到个人空间</span>
+							<span class="fieldspan">
+								<input class="input" type="text" name="nem" value="$!name" placeholder="用户名/手机/邮箱">
+								<span class="user_field"></span>
+							</span>
+							<span class="fieldspan">
+								<input class="input" type="password" name="password" value="$!password" placeholder="密码">
+								<span class="pwd_field"></span>
+							</span>
+							<span style="display:block;width:100%;height:25px;margin-bottom:-10px;">
+								<a style="margin-left:165px;font-size:13px;">忘记密码？</a>
+							</span>
+							<span class="fieldspan">
+								<input class="blue_bt" id="long_bt" type="submit" value="登录" style="float:left;">
+								<input class="blue_bt" id="register_bt" type="reset" value="注册" style="float:right;"/>
+							</span>
+						</div>
+						</form>
+					</div>
+					<div class="register_main">
+						<form action="/register" id="register_form" method="post">
+						<div class="register_content">
+							<span class="r_title">新用户注册</span>
+							<span class="step_main">
+								<div class="item this">1.填写用户信息</div>
+								<div class="slip"></div>
+								<div class="item">2.验证邮箱</div>
+								<div class="slip"></div>
+								<div class="item">3.注册成功</div>
+							</span>
+							<ul class="r_s_0">
+								<li>用户名:</li>
+								<li>
+									<input type="text" name="name" onblur="" style="width:120px;display:inline;"/>&nbsp;
+								</li>
+								<li>真实姓名:</li>
+								<li>
+									<input type="text" name="trueName" style="width:120px"/>&nbsp;
+								</li>
+								<li>性别:</li>
+								<li>
+									<input id="man" type="radio" name="sex" value="1" checked="checked"/>
+									<label for="man">男</label>
+									<input id="women" type="radio" name="sex" value="0"/>
+									<label for="women">女</label>
+									&nbsp;
+								</li>
+								<li>生日:</li>
+								<li>
+									<input type="text" name="birthDay" style="width:80px;"placeholder="年-月-日"/>
+									<input id="new" type="radio" name="birthDayType" value="1" checked="checked"/>
+									<label for="new">公历</label>
+									<input id="old" type="radio" name="birthDayType" value="0"/>
+									<label for="old">旧历</label>
+									&nbsp;
+								</li>
+								<li>手机号:</li>
+								<li>
+									<input type="text" name="mobile" style="width:120px"/>&nbsp;
+								</li>
+								<li>邮箱:</li>
+								<li>
+									<input type="text" id="email" name="email" style="width:120px" onblur="document.getElementById('email1').value = this.value;"/>&nbsp;
+								</li>
+								<li>密码:</li>
+								<li>
+									<input type="password" name="password" style="width:120px"/>&nbsp;
+								</li>
+								<li>重复密码:</li>
+								<li>
+									<input type="password" name="repassword" style="width:120px"/>&nbsp;
+								</li>
+							</ul>
+							<input type="button" value="下一步" id="step_bt" class="blue_bt">
+						</div>
+						</form>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
