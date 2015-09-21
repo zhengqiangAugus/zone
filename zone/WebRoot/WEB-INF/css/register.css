@@ -1,0 +1,19 @@
+body{
+	background-image:url("../images/login_bg_middle.jpg");
+	background-repeat:no-repeat;
+	background-size:100% auto;
+	overflow:hidden;
+	text-align:center;
+	height:100%;
+}
+.register_content{
+	
+}
+.register_main{
+	width:30%;
+	height:300px;
+	margin: auto;  
+	position: absolute;  
+	top: 0; left: 0; bottom: 0; right: 0;
+	background-color:lightblue;
+}

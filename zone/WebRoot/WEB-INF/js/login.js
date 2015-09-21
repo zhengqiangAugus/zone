@@ -71,8 +71,6 @@ $(function(){
 		$(".righthandon").removeClass("righthandon").addClass("righthand");
 	});
 	$("#register_bt").click(function(){
-		$(".login_content").hide();
-		$(".register_main").show();
 		window.location = "/register";
 	});
 	$("#step_bt").click(function(){

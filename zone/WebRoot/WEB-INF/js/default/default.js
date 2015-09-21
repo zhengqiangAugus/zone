@@ -28,9 +28,15 @@ function unUseKeys(){
             e.preventDefault();
         }
         e.cancelBubble = true;
-        window.event.returnValue = false;
+        if(window.event)window.event.returnValue = false;
         return false;
 	});
+}
+function unMouseWheel(){
+	bindEvent(window,"keydown",function(e){
+		e = window.event || e;
+		e.preventDefault();
+	}
 }
 
 /**

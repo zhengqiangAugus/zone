@@ -62,9 +62,10 @@
     <bean id="controllerAdvice" class="com.zq.aop.ControllerAdvice"></bean>
     <aop:config>
         <aop:pointcut expression="execution(* com.zq.action.*.*(..))" id="cpc" />
-		<aop:aspect id="controllerAsect" ref="controllerAdvice">
+		<!-- <aop:aspect id="controllerAsect" ref="controllerAdvice">
 			<aop:around method="proxy" pointcut-ref="cpc"/>
-		</aop:aspect>
+		</aop:aspect> -->
+		<aop:advisor advice-ref="controllerAdvice" pointcut-ref="cpc"/>
     </aop:config>
     
 </beans>
