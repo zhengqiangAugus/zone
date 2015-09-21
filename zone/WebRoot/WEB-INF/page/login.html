@@ -1,7 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10; IE=EmulateIE11">
+		<link rel="icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
 		<title>登录</title>
 		<script src="../js/jquery-1.4.2.min.js"></script>
 		<link rel="stylesheet" href="../css/login.css">
@@ -16,18 +20,37 @@
 					rab.addClass("unfocus");
 				});
 				fi.first().focus();
+				/* var count = 300;
+				for(var i = 0;i<count;i++){
+					var span = $("<span style='display:block;position:absolute;width:2px;height:2px;background-color:white;z-index:0;'></span>");
+					var pos = randomPosition(document.documentElement.clientWidth-20,document.documentElement.clientHeight-20);
+					span.css({left:pos.x,top:pos.y});
+					var size = Math.round(Math.random()*4)+"px";
+					span.css({width:size,height:size})
+					span.appendTo(document.body);
+				} */
 			});
+			function randomPosition(mx,my){
+				x = Math.round(Math.random()*mx);
+				y = Math.round(Math.random()*my);
+				var x1 = $(".rain").offset().left,y1 = $(".rain").offset().top,x2 = $(".rain").width() + x1 +10,y2 = $(".rain").height() + y1 +10;
+				if(x >= x1 && x <= x2 && y >= y1 && y <= y2){
+					return randomPosition(mx,my);
+				}
+				return {x:x,y:y};
+			}
 		</script>
 	</head>
 	<body id="home">
 		<div class="rain">
 			<div class="border">
 				<form action="login" method="post">
-					<label for="nem">邮箱</label>
-					<input name="nem" type="text" placeholder="邮箱" />
+					<label for="nem">账号</label>
+					<input name="nem" type="text" placeholder="用户名/手机/邮箱" />
 					<label for="password">密码</label>
 					<input name="password" type="password" placeholder="密码" />
 					<input type="submit" value="登录" />
+					<input type="button" value="注册"/>
 				</form>
 			</div>
 		</div>
