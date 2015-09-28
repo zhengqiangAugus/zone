@@ -1,14 +1,46 @@
 <html>
 	<head>
+		<meta charset="utf-8" />
 		<base href="$!path">
 		<title>新用户注册</title>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10; IE=EmulateIE11">
+		<link rel="icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="../css/register.css"/>
-		<script type="text/javascript" src="../js/reflection.js"></script>
+		<script type="text/javascript" src="../js/dwr.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-form-fieldname.js"></script>
+		<script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-form.js"></script>
+		<script type="text/javascript" src="../js/register.js"></script>
 	</head>
 	<body>
-		<div class="register_content">
-			<div class="register_main">
-				
+		<div class="main">
+			<div class="content">
+				<h1>新用户注册</h1>
+				<form action="doregister" method="post" id="register_form">
+					<label>用户名:</label>
+					<input type="text" field="name"/><br/>
+					<label>设置密码:</label>
+					<input type="password" field="password"/><br/>
+					<label>确认密码:</label>
+					<input type="password" field="repassword"/><br/>
+					<label>手机:</label>
+					<input type="text" field="mobile"/><br/>
+					<label>邮箱:</label>
+					<input type="text" field="email"/><br/>
+					<div style="margin-top:-20px;margin-bottom:-20px;">
+						<label>&nbsp;</label>
+						<input type="text" id="checkerror" class="checkerror" readonly="readonly" onfocus="this.blur()"/>
+					</div>
+					<label>邮箱验证码:</label>
+					<input type="text" field="emailCheck" style="width:100px;"/>
+					<input type="button" id="getCode_bt" value="获取验证码" style="width:120px;color:black;font-size:19px;">
+					<div style="text-align:center;margin-top:-8px;">
+						<input type="submit" value="确认注册">
+					</div>
+				</form>
 			</div>
 		</div>
 	</body>

@@ -10,7 +10,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 
 public class SecurityInterceptor extends HandlerInterceptorAdapter {
-	private String[] ignorePath = {"/","/login","/register"};
+	private String[] ignorePath = {"/","/login","/register","/doregister"};
 	@Override  
     public boolean preHandle(HttpServletRequest request,HttpServletResponse response, Object handler) throws Exception{  
 		if(handler instanceof HandlerMethod){

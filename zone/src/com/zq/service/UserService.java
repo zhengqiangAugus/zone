@@ -38,4 +38,18 @@ public class UserService {
 		return false;
 	}
 	
+	public boolean registerAnUser(String name,String password,String mobile,String email){
+		try {
+			User user = new User();
+			user.setName(name);
+			user.setPassword(password);
+			user.setMobile(mobile);
+			user.setEmail(email);
+			userDao.save(user);
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
 }

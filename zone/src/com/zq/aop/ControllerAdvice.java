@@ -6,7 +6,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
-import org.aspectj.lang.ProceedingJoinPoint;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -16,7 +15,7 @@ import com.zq.util.CommUtil;
 
 public class ControllerAdvice implements MethodInterceptor{
 
-	public Object proxy(ProceedingJoinPoint joinPoint) {
+	/*public Object proxy(ProceedingJoinPoint joinPoint) {
 		HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
 		try {
 			Class<?> argTypes[] = new Class[joinPoint.getArgs().length];
@@ -29,6 +28,7 @@ public class ControllerAdvice implements MethodInterceptor{
 			Method method = clas.getDeclaredMethod(joinPoint.getSignature().getName(),argTypes);
 			Ajax ajax = method.getAnnotation(Ajax.class);
 			Object obj = joinPoint.proceed();
+			System.out.println(obj);
 			if(ajax!=null)return obj;
 			String str = String.valueOf(obj+"").trim();
 			if(!str.startsWith("forward:")&&!str.startsWith("redirect:")){
@@ -44,7 +44,7 @@ public class ControllerAdvice implements MethodInterceptor{
 			return "mobile/login";
 		}
 		return "login";
-	}
+	}*/
 
 	@Override
 	public Object invoke(MethodInvocation arg0) throws Throwable {

@@ -39,16 +39,22 @@ if(window.addEventListener){
 	window.attachEvent("onload",_dwr__init);
 }
 
-function doDwr(wh,args,callback){
-	if(!wh)return null;
-	if(arguments.length == 2){
-		if(typeof args == "function"){
-			callback = args;
-			args = null;
+function doDwr(){
+	var args = "";
+	var executor = arguments[0];
+	var hascallback = false;
+	var arrs = arguments;
+	if(arguments.length >= 2){
+		for(var i = 1;i<arguments.length;i++){
+			args += "arrs["+i+"],";
+		}
+		if(args.length>0)args = args.substring(0,args.length-1);
+		if(typeof arguments[arguments.length-1] == "function"){
+			hascallback = true;
 		}
 	}
 	var rawstate = dwr.engine._async;
-	var source = wh.split(".");
+	var source = executor.split(".");
 	var result = "";
 	var req;
 	try {
@@ -66,16 +72,17 @@ function doDwr(wh,args,callback){
 	    	var script = document.createElement("script");
 	    	script.text = req.responseText;
 	    	document.head.appendChild(script);
-	    	if(!callback){
+	    	var callback;
+	    	if(!hascallback){
 				dwr.engine._async = false;
 				callback = function(data){result = data;};
 			}else{
 				dwr.engine._async = true;
 			}
-			if(args){
-				eval(wh+"(args,callback)");
+			if(!hascallback){
+				eval(executor+"("+args+",callback)");
 			}else{
-				eval(wh+"(callback)");
+				eval(executor+"("+args+")");
 			}
 	    }
 	};

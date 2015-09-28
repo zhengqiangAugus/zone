@@ -14,6 +14,7 @@ public class MessageService {
 	private MessageDao messageDao;
 	
 	public List<Message> findAll(){
+		System.out.println("****************");
 		return messageDao.findAll();
 	}
 }

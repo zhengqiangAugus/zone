@@ -50,6 +50,21 @@ public class IndexAction extends BaseAction{
 	}
 	
 	@Ajax
+	@RequestMapping(value="/doregister",produces="text/html; charset=UTF-8")
+	public @ResponseBody String doregister(String name,String password,String mobile,String email,String emailCheck){
+		if(userService.hasUser(name))
+			return "注册失败，该用户名已被使用！";
+		String code = session.getAttribute("code"+email)+"";
+		if(!code.equals(emailCheck.toLowerCase())){
+			return "验证码错误！";
+		}
+		if(userService.registerAnUser(name, password, mobile, email)){
+			return "success";
+		}
+		return "注册失败！";
+	}
+	
+	@Ajax
 	@RequestMapping("/sendEmail")
 	public @ResponseBody String sendEmail(String email){
 		String code = emailService.sendCheckCode(email);

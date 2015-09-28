@@ -11,6 +11,9 @@
         <create javascript="userService" creator="spring">
             <param name="beanName" value="userService"></param>
         </create>
+        <create javascript="emailService" creator="spring">
+            <param name="beanName" value="emailService"></param>
+        </create>
         <convert match="com.zq.bean.*" converter="bean"></convert>
         <convert match="org.springframework.data.domain.PageImpl" converter="bean"></convert>
     </allow>
